@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.entity.Invite;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.yulichang.base.MPJBaseService;
 
 /**
  * <p>
@@ -11,6 +12,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xuezhihengg
  * @since 2024-07-05
  */
-public interface IInviteService extends IService<Invite> {
+public interface IInviteService extends MPJBaseService<Invite> {
 
 }

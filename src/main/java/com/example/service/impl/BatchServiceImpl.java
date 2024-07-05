@@ -4,6 +4,7 @@ import com.example.entity.Batch;
 import com.example.dao.BatchMapper;
 import com.example.service.IBatchService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.yulichang.base.MPJBaseServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,6 @@ import org.springframework.stereotype.Service;
  * @since 2024-07-04
  */
 @Service
-public class BatchServiceImpl extends ServiceImpl<BatchMapper, Batch> implements IBatchService {
+public class BatchServiceImpl extends MPJBaseServiceImpl<BatchMapper, Batch> implements IBatchService {
 
 }

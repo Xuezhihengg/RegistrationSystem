@@ -4,6 +4,7 @@ import com.example.entity.Examination;
 import com.example.dao.ExaminationMapper;
 import com.example.service.IExaminationService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.yulichang.base.MPJBaseServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,6 @@ import org.springframework.stereotype.Service;
  * @since 2024-07-04
  */
 @Service
-public class ExaminationServiceImpl extends ServiceImpl<ExaminationMapper, Examination> implements IExaminationService {
+public class ExaminationServiceImpl extends MPJBaseServiceImpl<ExaminationMapper, Examination> implements IExaminationService {
 
 }

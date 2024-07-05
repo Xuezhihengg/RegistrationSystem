@@ -2,6 +2,7 @@ package com.example.dao;
 
 import com.example.entity.SignUp;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.github.yulichang.base.MPJBaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
@@ -15,7 +16,7 @@ import org.apache.ibatis.annotations.Select;
  * @author xuezhihengg
  * @since 2024-07-04
  */
-public interface SignUpMapper extends BaseMapper<SignUp> {
+public interface SignUpMapper extends MPJBaseMapper<SignUp> {
 
     @Results(
             id = "signUpResult",

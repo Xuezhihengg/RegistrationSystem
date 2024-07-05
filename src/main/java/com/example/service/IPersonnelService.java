@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.entity.Personnel;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.yulichang.base.MPJBaseService;
 
 /**
  * <p>
@@ -11,6 +12,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xuezhihengg
  * @since 2024-07-04
  */
-public interface IPersonnelService extends IService<Personnel> {
+public interface IPersonnelService extends MPJBaseService<Personnel> {
 
 }

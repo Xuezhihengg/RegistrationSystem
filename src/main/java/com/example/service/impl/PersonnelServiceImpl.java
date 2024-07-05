@@ -4,6 +4,7 @@ import com.example.entity.Personnel;
 import com.example.dao.PersonnelMapper;
 import com.example.service.IPersonnelService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.yulichang.base.MPJBaseServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,6 @@ import org.springframework.stereotype.Service;
  * @since 2024-07-04
  */
 @Service
-public class PersonnelServiceImpl extends ServiceImpl<PersonnelMapper, Personnel> implements IPersonnelService {
+public class PersonnelServiceImpl extends MPJBaseServiceImpl<PersonnelMapper, Personnel> implements IPersonnelService {
 
 }

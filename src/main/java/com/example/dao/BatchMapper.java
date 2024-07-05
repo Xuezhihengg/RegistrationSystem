@@ -2,6 +2,7 @@ package com.example.dao;
 
 import com.example.entity.Batch;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.github.yulichang.base.MPJBaseMapper;
 
 /**
  * <p>
@@ -11,6 +12,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author xuezhihengg
  * @since 2024-07-04
  */
-public interface BatchMapper extends BaseMapper<Batch> {
+public interface BatchMapper extends MPJBaseMapper<Batch> {
 
 }

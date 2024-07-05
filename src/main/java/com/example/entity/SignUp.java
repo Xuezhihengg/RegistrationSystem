@@ -5,19 +5,14 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * <p>
- * 报名表
- * </p>
- *
- * @author xuezhihengg
- * @since 2024-07-04
- */
 @Getter
 @Setter
+@Builder
 @TableName("SignUp")
 @Schema(name = "SignUp", description = "报名表")
 public class SignUp implements Serializable {
@@ -43,4 +38,8 @@ public class SignUp implements Serializable {
     @Schema(description = "不同意理由")
     @TableField("reason")
     private String reason;
+
+    @Schema(description = "考试编号")
+    @TableField("exam_id")
+    private Integer examId;
 }
