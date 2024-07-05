@@ -7,14 +7,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.yulichang.base.MPJBaseServiceImpl;
 import org.springframework.stereotype.Service;
 
-/**
- * <p>
- * 注册表 服务实现类
- * </p>
- *
- * @author xuezhihengg
- * @since 2024-07-04
- */
 @Service
 public class AuthServiceImpl extends MPJBaseServiceImpl<AuthMapper, Auth> implements IAuthService {
 

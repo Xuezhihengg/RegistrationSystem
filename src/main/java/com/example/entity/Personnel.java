@@ -10,14 +10,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xuezhihengg
- * @since 2024-07-04
- */
 @Getter
 @Setter
 @AllArgsConstructor

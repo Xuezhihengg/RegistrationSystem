@@ -8,14 +8,6 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
-/**
- * <p>
- * 报名表 Mapper 接口
- * </p>
- *
- * @author xuezhihengg
- * @since 2024-07-04
- */
 public interface SignUpMapper extends MPJBaseMapper<SignUp> {
 
     @Results(

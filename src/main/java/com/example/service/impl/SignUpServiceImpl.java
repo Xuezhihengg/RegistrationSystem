@@ -10,7 +10,6 @@ import com.example.entity.business_entity.DetailItem;
 import com.example.entity.response_entity.BusinessCodes;
 import com.example.entity.response_entity.BusinessException;
 import com.example.service.ISignUpService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.yulichang.base.MPJBaseServiceImpl;
 import com.github.yulichang.wrapper.MPJLambdaWrapper;
 import org.springframework.beans.factory.annotation.Autowired;

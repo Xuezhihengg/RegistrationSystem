@@ -11,14 +11,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * <p>
- * 邀请表
- * </p>
- *
- * @author xuezhihengg
- * @since 2024-07-05
- */
 @Getter
 @Setter
 @Builder

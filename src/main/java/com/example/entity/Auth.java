@@ -8,14 +8,6 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * <p>
- * 注册表
- * </p>
- *
- * @author xuezhihengg
- * @since 2024-07-04
- */
 @Getter
 @Setter
 @TableName("Auth")
