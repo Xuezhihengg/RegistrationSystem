@@ -35,12 +35,13 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authorize)-> authorize
                         .anyRequest().authenticated())
-                .sessionManagement(session->session
-                        .maximumSessions(2)
-                        .maxSessionsPreventsLogin(true))
+//                .sessionManagement(session->session
+//                        .maximumSessions(2)
+//                        .maxSessionsPreventsLogin(true))
                 .logout((logout)->logout
                         .addLogoutHandler(new HeaderWriterLogoutHandler(new ClearSiteDataHeaderWriter(COOKIES))))
                 .formLogin(Customizer.withDefaults())
+                .httpBasic(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable);
         return http.build();
     }
