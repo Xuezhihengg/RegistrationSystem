@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.example.entity.Personnel;
 import com.example.entity.SignUp;
@@ -16,6 +17,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,8 +64,16 @@ public class ApproveController {
     @Operation(summary = "获取监考名单",description = "监考安排表/监考详细名单--获取监考名单--考务科科长/副院长/综合办主任/研公办主任")
     @GetMapping("/detail")
     public ResponseResult<List<DetailItem>> getDetailList() {
-       return ResponseResult.success( signUpServiceImpl.getDetailItemByService());
+       return ResponseResult.success( signUpServiceImpl.getDetailItemsByBatchId(null));
+    }
+
+    @Operation(summary = "获取指定批次的监考名单",description = "监考管理/获取名单--获取指定批次的监考名单--考务科科长/副院长/综合办主任/研公办主任")
+    @GetMapping("/detail/{batchId}")
+    public ResponseResult<List<DetailItem>> getDetailList(@PathVariable @NotNull Integer batchId){
+        return ResponseResult.success( signUpServiceImpl.getDetailItemsByBatchId(batchId));
+
     }
 }
+
 
 

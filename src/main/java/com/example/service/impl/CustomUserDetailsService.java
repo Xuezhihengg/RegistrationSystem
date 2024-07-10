@@ -35,7 +35,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         return new User(
                 auth.getPersonnelId(),
-                passwordEncoder.encode(auth.getPassword()),
+//              passwordEncoder.encode(auth.getPassword()),
+                auth.getPassword(),
                 grantedAuthorityList
         );
     }

@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
 @Tag(name = "Examination" ,description = "考试表操作接口")
 @RestController
 @RequestMapping("/examination")
@@ -26,7 +25,7 @@ public class ExaminationController {
 
     @Operation(summary = "获取指定批次的全部考试信息",description = "监考报名/监考批次详情--获取监考批次详情--WORKER")
     @GetMapping("{batch_id}")
-    public ResponseResult<List<Examination>> getExaminationByBatchId(@PathVariable("batch_id") String batchId) throws BusinessException {
+    public ResponseResult<List<Examination>> getExaminationByBatchId(@PathVariable("batch_id") Integer batchId) throws BusinessException {
         QueryWrapper<Examination> sectionQueryWrapper = new QueryWrapper<>();
         sectionQueryWrapper.eq("batch_id", batchId);
         List<Examination> responseData = examinationServiceImpl.list(sectionQueryWrapper);

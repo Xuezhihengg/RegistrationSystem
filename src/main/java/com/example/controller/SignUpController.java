@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.entity.SignUp;
 import com.example.entity.business_entity.ApplyRequest;
 import com.example.entity.business_entity.ApplyStatusResponse;
@@ -15,6 +16,8 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Tag(name = "SignUp", description = "报名表操作接口")
 @RestController
@@ -34,6 +37,14 @@ public class SignUpController {
                 .applyStatus(signUp.getApprovalStatus())
                 .reason(signUp.getReason())
                 .build());
+    }
+
+    @Operation(summary = "获取指定工号的所有报名信息",description = "我的申请记录--获取指定工号的所有报名信息--WORKER")
+    @GetMapping("status/{personnelId}")
+    public ResponseResult<List<SignUp>> getSignUpList(@PathVariable @NotEmpty String personnelId) throws BusinessException{
+        List<SignUp> list =  signUpServiceImpl.list(new QueryWrapper<SignUp>().eq("personnel_id", personnelId));
+        if(list == null) throw new BusinessException(BusinessCodes.Other_Error);
+        return ResponseResult.success(list);
     }
 
     @Operation(summary = "提交报名表", description = "监考报名/提交报名--提交报名表数据入库--WORKER")
